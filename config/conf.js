@@ -22,7 +22,8 @@ const config = {
     address: env.get('params.address')
   },
   suites: {
-    CadastrarUsuario: ['../test_spec/CadastrarUsuario.js']
+    CadastrarUsuarioAprop: ['../test_spec/CadastrarUsuarioAprop.js'],
+    CadastrarUsuarioInaprop: ['../test_spec/CadastrarUsuarioInaprop.js']
   },
   onPrepare () {
     jasmine.getEnv().addReporter(

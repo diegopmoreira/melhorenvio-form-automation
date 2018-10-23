@@ -11,5 +11,6 @@ This is the test to evaluate the knowledge about automation tests.
 ## Running the test
 On the project directory:
 - `sudo npm run webdriver:start`
-- `./node_modules/protractor/bin/protractor config/conf.js --suite  CadastrarUsuario`
+- `./node_modules/protractor/bin/protractor config/conf.js --suite  CadastrarUsuarioAprop`
+- `./node_modules/protractor/bin/protractor config/conf.js --suite  CadastrarUsuarioInaprop`
 

@@ -1,7 +1,9 @@
 /* global By, element */
 'use strict';
 const uuidv4 = require('uuid/v4');
+
 const CadastrarUsuarioPage = function () {
+    //const EC = protractor.ExpectedConditions;
 
     //Selectors
     const nome = element(by.id('iptNome'));
@@ -18,6 +20,7 @@ const CadastrarUsuarioPage = function () {
     const chkTermos = element(by.id('chkTermos'));
     const btnAvancar = element(by.className('btnAvancar'));
     const passoInfoAdicionais = element(by.css('.formSteps__step:nth-child(2)'));
+    const fieldsetCPF = cpf.element(by.xpath('..')).element(by.css('p'));
     const randomIndex = uuidv4();
 
     //Actions
@@ -81,6 +84,11 @@ const CadastrarUsuarioPage = function () {
         browser.sleep(1000);
         expect(passoInfoAdicionais.getAttribute('class')).toBe('formSteps__step formSteps__step--active');
     };
+
+    this.checarCPFBranco = () => {
+        expect(fieldsetCPF.isDisplayed()).toBeTruthy();
+    };
+    
 };
 
 module.exports = new CadastrarUsuarioPage();
